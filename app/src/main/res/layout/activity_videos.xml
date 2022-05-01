@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".VideosActivity">
 
+    <!--FloatingActionButton: click to open activity to add new video-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addVideoFab"
         android:layout_width="wrap_content"
@@ -14,6 +15,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"/>
+
+    <!--RecyclerView: Show all Videos-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videosRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/row_video"/>
 
 
 </RelativeLayout>
